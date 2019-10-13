@@ -9,6 +9,7 @@ def TMatrix(A):
     return AT
 
 def Adjacency_matrix(nodes,edges_with_weight):
+
     vertex = len(nodes)
     adj_matrix = [[None] * (vertex + 1) for i in range(vertex + 1)]
 
