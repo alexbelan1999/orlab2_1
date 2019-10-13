@@ -1,7 +1,9 @@
+import math
 import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
 import func
+
 nodes = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 edges_with_weight = [(1,2,10), (1,4,5), (2,3,3), (2,5,9) , (3,6,11), (4,2,5), (4,5,10), (4,7,6), (4,8,15), (5, 6,13), (5,8,10), (5,9,5), (6,9,7), (7,8,8), (8,9,4)]
 G = nx.DiGraph()
