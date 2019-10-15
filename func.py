@@ -43,6 +43,9 @@ def Dijkstra(nodes, edges_with_weight, start, end):
 
         bool_arr[v] = True
 
+        if (v == end):
+            break
+
         print('Рассматривается вершина: ',v)
 
         for j in range(1, vertex + 1):
@@ -51,9 +54,6 @@ def Dijkstra(nodes, edges_with_weight, start, end):
                 d[j] = d[v] + edge_weight
                 int_arr[j] = v
             print('l`(', j ,') = ', d[j])
-
-        if (v == end):
-            break
 
     result = []
     if (d[end] == math.inf):
