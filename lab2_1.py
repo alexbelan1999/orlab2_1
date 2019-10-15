@@ -4,11 +4,19 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import func
 
-var = int(input("Введите 1 для метода Дейкстры или 2 для метода Флойда: "))
-start = int(input("Введите начальную вершину: "))
-end = int(input("Введите конечную вершину: "))
-
 nodes = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+var = 0
+start = 0
+end = 0
+while var not in [1,2]:
+    var = int(input("Введите 1 для метода Дейкстры или 2 для метода Флойда: "))
+
+while start not in nodes:
+    start = int(input("Введите начальную вершину: "))
+
+while end not in nodes:
+    end = int(input("Введите конечную вершину: "))
+
 edges_with_weight = [(1,2,10), (1,4,5), (2,3,3), (2,5,9) , (3,6,11), (4,2,5), (4,5,10), (4,7,6), (4,8,15), (5, 6,13), (5,8,10), (5,9,5), (6,9,7), (7,8,8), (8,9,4)]
 G = nx.DiGraph()
 G.add_nodes_from(nodes)
