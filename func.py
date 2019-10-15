@@ -92,14 +92,22 @@ def Floyd(nodes, edges_with_weight, start, end):
                 if (len1 > 0 and len1 < d[i][j]):
                     d[i][j] = len1;
                     int_arr[i][j] = k;
+        print()
         print('Шаг ',k,':')
         print('L(' , k ,'):')
-        print()
+
+        test = 0
         for dp in d:
-            print(dp)
+            if test !=0:
+                print(dp[1:])
+            test += 1
+
+        test = 0
         print('S(' , k , '):')
         for arr in int_arr:
-            print(arr)
+            if test !=0:
+                print(arr[1:])
+            test += 1
 
     result =[]
 
